@@ -1,6 +1,6 @@
 # first_github
 
-実行すると、web画面にTest1〜3が表示されます。
+tomcat8.xなどから実行すると、web画面にTest1〜3が表示されます。
 
 ・Test1
 
