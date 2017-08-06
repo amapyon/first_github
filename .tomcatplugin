@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/</rootDir>
+    <workDir>work</workDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation>/Applications/Eclipse_4.7.0.app/Contents/workspace/ServletTest0/release/ServletTest0.war</warLocation>
+    <extraInfo></extraInfo>
+    <mavenClasspath>false</mavenClasspath>
+    <webPath>/servletTest0</webPath>
+</tomcatProjectProperties>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Servlet TEST</title>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/test.js" charset="utf-8"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+  <div class="test1">
+    <h3>Test1</h3> 数値を入力してください。(1〜1000)
+    <br> 回答には、1〜入力数値までの数字が順に表示されます。
+    <br> 　※3の倍数時は「 "△"」、 4の倍数時は「 "□"」、 3と 4の公倍数時は「 "◆"」を表示します　<br>
+    <input type="text" id="input1" class="textbox" size="15" value="100">
+    <input type="button" id="request1" class="button" value="回答の表示">
+    <div>
+      <p>回答</p>
+      <div id="result1">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="test2">
+    <h3>Test2</h3> 数値を入力してください。
+    <br> 1〜20の数値を入力した場合、アラビア数字に変換します。
+    <br>
+    <input type="text" id="input2" class="textbox" size="15" value="20">
+    <input type="button" id="request2" class="button" value="回答の表示">
+    <div>
+      <p>回答</p>
+      <div id="result2">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="test3">
+    <h3>Test3</h3> 英文を入力してください。
+    <br>
+    <textarea name="example" class="textarea" cols="50" rows="10" id="input3"></textarea>
+    <input type="button" id="request3" class="button" value="回答の表示">
+
+    <div>
+      <p>回答</p>
+      <div id="result3">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
