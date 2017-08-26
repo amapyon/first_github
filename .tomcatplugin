@@ -9,5 +9,5 @@
     <warLocation>/Applications/Eclipse_4.7.0.app/Contents/workspace/ServletTest0/release/ServletTest0.war</warLocation>
     <extraInfo></extraInfo>
     <mavenClasspath>false</mavenClasspath>
-    <webPath>/servletTest0</webPath>
+    <webPath>/ServletTest0</webPath>
 </tomcatProjectProperties>
