@@ -10,5 +10,11 @@
 	<classpathentry kind="src" output="work" path="work"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/Users/KZP/Downloads/spring-test-4.3.10.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/spring-core-4.3.10.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/spring-web-4.3.10.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/jackson-core-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/jackson-databind-2.9.0.jar"/>
+	<classpathentry kind="lib" path="/Users/KZP/Downloads/jackson-annotations-2.9.0.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>
