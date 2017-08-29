@@ -12,20 +12,28 @@ import javax.servlet.http.HttpServletResponse;
 public class ServletTest2 extends HttpServlet {
 	private final String REQUEST_STRING = "requestJs";
 
-	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException {
 		String parameter = req.getParameter(REQUEST_STRING);
 		int inputNumber = 0;
 
 		try {
 			inputNumber = Integer.parseInt(parameter);
 
-		}catch (Exception e) {
-			reternMessage("数値を入力してください。。", res);
+		}catch (NumberFormatException nfe) {
+			try {
+				reternMessage("数値を入力してください。。", res);
+			} catch (IOException ioe) {
+				throw new ServletException(ioe);
+			}
 			return;
 		}
 
 		String message = genMessage(inputNumber);
-		reternMessage(message, res);
+		try {
+			reternMessage(message, res);
+		} catch (IOException ioe) {
+			throw new ServletException(ioe);
+		}
 		return;
 	}
 
@@ -35,11 +43,11 @@ public class ServletTest2 extends HttpServlet {
 	private String genMessage(int inputNumber){
 
 		if(inputNumber > 20){
-			return "数値が大きすぎます。。20イカの数値を入力してください。";
+			return "変換できません";
 		}
 
 		if(inputNumber < 1){
-			return "1以上の数値を入力してください。。。";
+			return "変換できません";
 		}
 
 		String message = "";
