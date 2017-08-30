@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Roman;
+
 public class ServletTest2 extends HttpServlet {
 	private final String REQUEST_STRING = "requestJs";
 
@@ -28,7 +30,7 @@ public class ServletTest2 extends HttpServlet {
 			return;
 		}
 
-		String message = genMessage(inputNumber);
+		String message = Roman.convertFromArabic(inputNumber);
 		try {
 			reternMessage(message, res);
 		} catch (IOException ioe) {
@@ -37,53 +39,6 @@ public class ServletTest2 extends HttpServlet {
 		return;
 	}
 
-	/*
-	 * 返却メッセージを生成します。
-	 */
-	private String genMessage(int inputNumber){
-
-		if(inputNumber > 20){
-			return "変換できません";
-		}
-
-		if(inputNumber < 1){
-			return "変換できません";
-		}
-
-		String message = "";
-
-		if (inputNumber < 11){
-			message = toRoman(inputNumber);
-		}else{
-			message = "Ⅹ" + toRoman(inputNumber-10);
-		}
-		return message;
-	}
-
-	/*
-	 * 1〜10までの数値をローマ字に変換します。
-	 */
-	private String toRoman(int inputNumber){
-
-		if (inputNumber < 6){
-			switch (inputNumber){
-				case 1 : return "Ⅰ";
-				case 2 : return "Ⅱ";
-				case 3 : return "Ⅲ";
-				case 4 : return "Ⅳ";
-				case 5 : return "Ⅴ";
-			}
-		}else{
-			switch (inputNumber){
-				case 6 : return "Ⅵ";
-				case 7 : return "Ⅶ";
-				case 8 : return "Ⅷ";
-				case 9 : return "Ⅸ";
-				case 10 : return "Ⅹ";
-			}
-		}
-		return "";
-	}
 
 	/*
 	*	メッセージをクライアントに返します。
