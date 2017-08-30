@@ -14,14 +14,10 @@ public class Roman {
 			return "変換できません";
 		}
 
-		String message = "";
-
 		if (inputNumber < 11){
-			message = toRoman(inputNumber);
-		}else{
-			message = "Ⅹ" + toRoman(inputNumber-10);
+			return toRoman(inputNumber);
 		}
-		return message;
+		return "Ⅹ" + toRoman(inputNumber-10);
 	}
 
 	/*
