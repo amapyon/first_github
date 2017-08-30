@@ -1,6 +1,5 @@
 package servlet;
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -21,7 +20,7 @@ public class ServletTest2 extends HttpServlet {
 		try {
 			inputNumber = Integer.parseInt(parameter);
 
-		}catch (NumberFormatException nfe) {
+		} catch (NumberFormatException nfe) {
 			try {
 				reternMessage("数値を入力してください。。", res);
 			} catch (IOException ioe) {
@@ -39,11 +38,10 @@ public class ServletTest2 extends HttpServlet {
 		return;
 	}
 
-
 	/*
-	*	メッセージをクライアントに返します。
-	*/
-	private void reternMessage(String message, HttpServletResponse res) throws IOException{
+	 * メッセージをクライアントに返します。
+	 */
+	private void reternMessage(String message, HttpServletResponse res) throws IOException {
 		String responseJson = "{\"responseMessage\" : \"" + message + "\"}";
 		res.setContentType("application/json;charset=UTF-8");
 		PrintWriter out = res.getWriter();
